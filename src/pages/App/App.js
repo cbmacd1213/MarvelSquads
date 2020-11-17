@@ -4,14 +4,25 @@ import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
+import characterService from '../../utils/characterService';
 import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: userService.getUser()
+      user: userService.getUser(),
+      characters: []
     };
+  }
+
+  async componentDidMount(){
+    const characterDetails = await characterService.characterDetail()
+    
+    this.setState({
+      characterDetails:characterDetails,
+      
+  })
   }
 
   /*--- Callback Methods ---*/
@@ -34,7 +45,9 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' render={() =>
-           <div>Hello World!</div> 
+           <HomePage
+            user={this.state.user}
+           />
           }/>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
