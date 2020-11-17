@@ -5,6 +5,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import characterService from '../../utils/characterService';
+import HomePage from '../HomePage/HomePage'
 import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {

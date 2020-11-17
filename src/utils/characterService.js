@@ -14,5 +14,5 @@ function characterDetail(character) {
             'Content-type': 'application/json'
         },
     };
-    return fetch(BASE_URL+'/character/', options).then(res => res.json());
+    return fetch(BASE_URL+'/', options).then(res => res.json());
 }

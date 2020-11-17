@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const characterCtrl = require('../../controllers/characters');
+const characterAPICtrl = require('../../controllers/characters');
 
 
-router.get('/character', characterCtrl.characterDetail);
+router.get('/character', characterAPICtrl.characterDetail);
