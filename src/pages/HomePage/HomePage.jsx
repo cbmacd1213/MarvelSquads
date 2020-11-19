@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+
 import characterService from '../../utils/characterService';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -8,21 +8,22 @@ import NavBar from '../../components/NavBar/NavBar';
 
 
 const HomePage = (props) => {
-    let { character } = useParams();
     const[characters, setCharacters]= useState([])
     useEffect(()=>{
       characterService.characterDetail().then(res =>{
-          let characters = [];
+          let person = [];
           res.forEach(thing => {
-            characters.push(thing)
+            person.push(thing)
           })
-          setCharacters(characters)
+          setCharacters(person)
           
         })
     }, [props.user])
   return (
     <div className="HomePage">
-      
+      <h1>
+          {characters.name}
+      </h1>
     </div>
     
   )

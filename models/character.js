@@ -6,7 +6,6 @@ const Schema = mongoose.Schema;
 const characterSchema = new Schema({
   apiID: String,
   user: {type: Schema.Types.ObjectId},
-  id: integer,
   name: String 
 
   

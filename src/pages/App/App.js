@@ -15,6 +15,7 @@ class App extends Component {
       user: userService.getUser(),
       characters: []
     };
+    console.log('YOOO', this.state);
   }
 
   async componentDidMount(){
