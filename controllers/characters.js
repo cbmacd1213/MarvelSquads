@@ -3,8 +3,6 @@ const Character = require('../models/character');
 const APIKEY = process.env.PUBLIC_APIKEY;
 
 
-
-
 module.exports = {
     characterDetail,
     show,
