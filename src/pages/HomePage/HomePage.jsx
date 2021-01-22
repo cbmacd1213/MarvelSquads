@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
 import characterService from '../../utils/characterService';
-import NavBar from '../../components/NavBar/NavBar';
 
 
 
